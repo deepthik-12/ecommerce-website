@@ -27,8 +27,7 @@ public class FakeStoreClient {
 
     private String genericProductUrl;
 
-    FakeStoreClient(RestTemplateBuilder restTemplateBuilder,
-                    @Value("${fakestore.api.url}") String fakeStoreUrl, @Value("${fakestore.api.paths.products}") String pathForProducts){
+    FakeStoreClient(RestTemplateBuilder restTemplateBuilder, @Value("${fakestore.api.url}")String fakeStoreUrl, @Value("${fakestore.api.paths.products}")String pathForProducts) {
 
         this.restTemplateBuilder = restTemplateBuilder;
         this.genericProductUrl = fakeStoreUrl + pathForProducts;
